@@ -6,3 +6,4 @@ ShellScript 教程
     :maxdepth: 1
 
     intro
+    variable

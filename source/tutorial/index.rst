@@ -9,4 +9,5 @@ ShellScript 教程
     variable
     string
     array
+    operator
 

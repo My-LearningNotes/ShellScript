@@ -10,6 +10,7 @@ Note of ShellScript
     :maxdepth: 1
     :caption: Contents:
 
+    tutorial/index
 
 
 Indices and tables

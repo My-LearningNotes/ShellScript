@@ -7,3 +7,5 @@ ShellScript 教程
 
     intro
     variable
+    string
+

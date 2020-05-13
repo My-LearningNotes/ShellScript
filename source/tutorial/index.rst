@@ -14,3 +14,5 @@ ShellScript 教程
     condition_and_loop
     function
     file_include
+    redirection
+

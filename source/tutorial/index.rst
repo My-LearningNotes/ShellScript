@@ -7,6 +7,7 @@ ShellScript 教程
 
     intro
     variable
+    variable_scope
     string
     array
     operator

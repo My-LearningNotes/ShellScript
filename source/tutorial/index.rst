@@ -11,6 +11,7 @@ ShellScript 教程
     array
     operator
     arguments
+    condition
     loop
     function
     file_include

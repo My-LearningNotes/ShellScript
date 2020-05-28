@@ -14,6 +14,7 @@ ShellScript 教程
     operator
     arguments
     exit_status
+    test
     condition
     loop
     select_in

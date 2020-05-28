@@ -13,6 +13,7 @@ ShellScript 教程
     array
     operator
     arguments
+    exit_status
     condition
     loop
     select_in

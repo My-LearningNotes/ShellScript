@@ -16,6 +16,7 @@ ShellScript 教程
     condition
     loop
     select_in
+    break_continue
     function
     file_include
     redirection

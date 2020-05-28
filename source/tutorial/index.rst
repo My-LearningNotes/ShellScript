@@ -8,6 +8,7 @@ ShellScript 教程
     intro
     variable
     variable_scope
+    special_variable
     string
     array
     operator

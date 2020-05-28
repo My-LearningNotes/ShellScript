@@ -15,6 +15,7 @@ ShellScript 教程
     arguments
     condition
     loop
+    select_in
     function
     file_include
     redirection

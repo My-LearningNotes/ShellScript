@@ -11,6 +11,7 @@ Note of ShellScript
     :caption: Contents:
 
     tutorial/index
+    command/index
 
 
 Indices and tables

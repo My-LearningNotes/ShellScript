@@ -9,7 +9,7 @@ Shell是一个用C语言编写的程序, 它是用户使用Linux的桥梁, 用�
 
 .. note::
 
-    Shell也是一个程序.
+    Shell也是一个程序, 它的一端连接着用户, 另一端连接着Linux内核, 它是用户和Linux系统沟通的桥梁.
 
 
 Shell脚本

@@ -40,6 +40,15 @@ Linux的Shell种类众多, 常见的有:
 
 在一般情况下, 并不区分Bourne Shell和Bourne Again Shell, 所以像\ ``#!/bin/sh``\ 同样可以改为\ ``#!/bin/bash``\ .
 
+尽管如此, \ ``bash``\ 和\ ``sh``\ 还是有一些不同之处:
+
+    *   一方面, \ ``bash``\ 扩展了一些命令参数;
+    *   另一方面, \ ``bash``\ 并不完全和\ ``sh``\ 兼容, 它们有些行为并不一致.
+      
+当前Linux系统可用的Shell都记录在\ ``/etc/shells``\ 文件中, 这是一个纯文本文件.
+
+可以通过环境变量\ ``SHELL``\ 查看当前使用的是哪个Shell: ``echo $SHELL``\ .
+
 
 第一个Shell脚本
 ---------------

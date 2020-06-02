@@ -7,6 +7,7 @@ ShellScript 教程
 
     intro
     run_mode
+    configuration
     variable
     variable_scope
     special_variable

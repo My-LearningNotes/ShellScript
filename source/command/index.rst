@@ -6,4 +6,5 @@ Shell命令
     :maxdepth: 1
 
     intro
+    common_commands/index
 

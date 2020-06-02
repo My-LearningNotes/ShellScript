@@ -5,6 +5,7 @@ Shell常用命令
     :maxdepth: 1
 
     alias
+    declare
     echo
     exit
     read

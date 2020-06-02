@@ -5,4 +5,5 @@ Shell常用命令
     :maxdepth: 1
 
     alias
+    echo
 

@@ -6,5 +6,6 @@ Shell常用命令
 
     alias
     echo
+    exit
     read
 

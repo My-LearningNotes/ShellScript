@@ -6,6 +6,7 @@ ShellScript 教程
     :maxdepth: 1
 
     intro
+    run_mode
     variable
     variable_scope
     special_variable

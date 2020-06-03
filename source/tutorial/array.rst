@@ -1,6 +1,10 @@
 Shell数组
 =========
 
+
+普通数组
+--------
+
 和其它编程语言一样, Shell也支持数组.
 数组(Array) 是若干数据的集合, 其中的每一个数据都称为元素(Element).
 
@@ -11,7 +15,7 @@ Shell数组
 
 
 定义数组
---------
+^^^^^^^^
 
 在Shell中, 用圆括号\ ``()``\ 来定义数组, 数组元素之间用空格分隔.
 
@@ -50,7 +54,7 @@ Example:
 
 
 获取数组元素
-------------
+^^^^^^^^^^^^
 
 -   获取数组元素的值和读取变量的值类似, 其一般形式为: 
 
@@ -77,7 +81,7 @@ Example:
 
 
 获取数组的长度
---------------
+^^^^^^^^^^^^^^
 
 -   获取数组长度的方法与获取字符串长度的方法相同, 其一般形式为: 
   
@@ -97,7 +101,7 @@ Example:
 
 
 数组拼接
---------
+^^^^^^^^
 
 所谓数组拼接(数组组合), 就是将两个数组连接成一个数组.
 
@@ -113,7 +117,7 @@ Example:
 
 
 删除数组元素
-------------
+^^^^^^^^^^^^
 
 删除数组元素和删除变量一样, 使用\ ``unset``\ 关键字, 具体格式如下:
 
@@ -130,4 +134,123 @@ Example:
     unset array_name
 
 表示删除整个数组.
+
+
+关联数组
+--------
+
+现在最新的Bash Shell已经支持关联数组了. 
+关联数组使用字符串作为下标, 而不是整数, 这样可以做到见名知意.
+
+关联数组也称为"键值对(key-value)", 键(key)也即字符串形式的数组下标, 值(value)也即元素值.
+
+不同于普通数组, 关联数组必须使用带有\ ``-A``\ 选项的\ ``declare``\ 命令创建.
+
+Example:
+
+.. code-block:: sh
+
+    declare -A color
+    color["red"]="#ff0000"
+    color["green"]="#00ff00"
+    color["blue"]="#0000ff"
+
+也可以在定义的同时赋值:
+
+.. code-block:: sh
+
+    declare -A color=(["red"]="#ff0000", ["green"]="#00ff00", ["blue"]="#0000ff")
+
+
+访问关联数组
+^^^^^^^^^^^^
+
+访问关联数组元素的方式几乎与普通数组相同, 具体形式:
+
+.. code-block:: sh
+
+    array_name["index"]
+
+Example:
+
+.. code-block:: sh
+
+    color["while"]="#ffffff"
+    color["black"]="#000000"
+
+加上\ ``${}``\ 即可获得数组元素的值:
+
+.. code-block:: sh
+
+    ${array_name["index"]}
+
+Example:
+
+.. code-block:: sh
+
+    echo ${color["while"]}
+    while=${color["while"]}
+
+
+获取所有元素的下标和值
+^^^^^^^^^^^^^^^^^^^^^^
+
+使用下面的形式可以获得关联数组的所有元素值:
+
+.. code-block:: sh
+
+    ${array_name[*]}
+    ${array_name[@]}
+
+使用下面的形式可以获取关联数组的所有下标值:
+
+.. code-block:: sh
+
+    ${!array_name[*]}
+    ${!array_name[@]}
+
+
+获取关联数组长度
+^^^^^^^^^^^^^^^^
+
+使用下面的形式可以获得关联数组的长度:
+
+.. code-block:: sh
+
+    ${#array_name[*]}
+    ${#array_name[@]}
+
+
+Example:
+
+.. code-block:: sh
+
+    #!/usr/bin/env bash
+
+    declare -A color
+    color["red"]="#ff0000"
+    color["green"]="#00ff00"
+    color["blue"]="#0000ff"
+    color["white"]="#ffffff"
+    color["black"]="#000000"
+
+    # 获取所有元素值
+    for value in ${color[*]}
+    do
+        echo $value
+    done
+    echo "************"
+
+    # 获取所有元素下标(键)
+    for key in ${!color[*]}
+    do
+        echo $key
+    done
+    echo "************"
+
+    # 列出所有键值对
+    for key in ${!color[*]}
+    do
+        echo "${key} -> ${color[$key]}"
+    done
 

@@ -17,6 +17,7 @@ ShellScript 教程
     arguments
     exit_status
     test
+    advanced_test
     condition
     loop
     select_in

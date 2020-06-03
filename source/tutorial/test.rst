@@ -1,3 +1,5 @@
+.. _command_test-reference-label:
+
 Shell ``test``\ 命令
 ====================
 
